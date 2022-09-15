@@ -1,7 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import * as S from "./NavbarStyles";
 import { FaTimes, FaBars } from "react-icons/fa";
-import { Button } from "../../GlobalStyles";
+//import { Button } from "../../GlobalStyles";
+import { Button } from "../button/Button";
 
 export const Navbar = () => {
   const [isClick, setIsClick] = useState(false);
@@ -38,13 +39,11 @@ export const Navbar = () => {
           <S.NavItemBtn>
             {buttonMobile ? (
               <S.NavBtnLink to="#register">
-                <Button onClick={handleClick} fontBig primary>Login</Button>
+                <Button onClick={handleClick} fontBig primary text="Login"/>
               </S.NavBtnLink>
             ) : (
               <S.NavBtnLink to="#register">
-                <Button primary>
-                  Login not m
-                </Button>
+                <Button primary text="Login not m" />
               </S.NavBtnLink>
             )}
           </S.NavItemBtn>
