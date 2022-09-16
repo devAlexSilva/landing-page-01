@@ -18,6 +18,7 @@ export const InfoSection = ({
   start,
   img,
   alt,
+  showBtn,
 }) => {
   return (
     <>
@@ -29,9 +30,11 @@ export const InfoSection = ({
                 <S.TopLine lightTopLine={lightTopLine}>{topLine}</S.TopLine>
                 <S.Heading lightText={lightText}>{headingLine}</S.Heading>
                 <S.Subtitle lightDesc={lightDesc}>{description}</S.Subtitle>
-                <Link to="#registre-se">
-                  <Button primary={primary} text={btnLabel} />
-                </Link>
+                {showBtn ? (
+                  <Link to="#registre-se">
+                    <Button primary={primary} text={btnLabel} />
+                  </Link>
+                ) : null}
               </S.TextWrapper>
             </S.InfoColumn>
             <S.InfoColumn about="c-r">
