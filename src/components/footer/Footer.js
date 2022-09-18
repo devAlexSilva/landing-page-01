@@ -13,9 +13,12 @@ export const Footer = () => {
           <S.FooterSubText>
             se for uma terça, um duplo expresso sem açucar
           </S.FooterSubText>
-          <S.Form about="form">
-            <S.FormInput type="email" placeholder="Digite seu Email" />
-            <Button primary text="enviar" />
+          <S.Form about="form" action="mailto:birthdayweb@gmail.com" method="POST" encType="text/plain">
+            <S.FormWrap>
+              <S.FormInput type="email" placeholder="Digite seu Email" />
+              <Button primary text="enviar" type="submit"/>
+            </S.FormWrap>
+              <S.FormTextArea type="text" />
           </S.Form>
         </S.FooterSubscription>
         <S.SocialMedia>
@@ -24,12 +27,22 @@ export const Footer = () => {
               <S.Icon />
               SKYFENG
             </S.SocialLogo>
-            <S.WebsiteRights>SKYFENG ©️ 2022</S.WebsiteRights>
+            <S.WebsiteRights>SKYFENG ©️2022</S.WebsiteRights>
             <S.SocialIcons>
-              <S.SocialIconLink href="https://github.com/devAlexSilva" title="Github" target="_blank" aria-label="Github">
+              <S.SocialIconLink
+                href="https://github.com/devAlexSilva"
+                title="Github"
+                target="_blank"
+                aria-label="Github"
+              >
                 <S.Github />
               </S.SocialIconLink>
-              <S.SocialIconLink href="https://linkedin.com/in/devAlexSilva" title="Linkdln" target="_blank" aria-label="Linkdln">
+              <S.SocialIconLink
+                href="https://linkedin.com/in/devAlexSilva"
+                title="Linkdln"
+                target="_blank"
+                aria-label="Linkdln"
+              >
                 <S.Linkdln />
               </S.SocialIconLink>
             </S.SocialIcons>

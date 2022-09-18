@@ -8,8 +8,7 @@ import { Link } from "react-router-dom";
 
 export const FooterContainer = styled.div`
   background-color: #1e1e1e;
-  //#101522
-  padding: 4rem 0 2rem;
+  padding: 4rem 0 .5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -40,19 +39,21 @@ export const FooterSubText = styled.div`
 `;
 
 export const Form = styled.form`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   max-width: 500px;
   width: 100%;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+`;
+
+export const FormWrap = styled.div`
+  display: flex;
+
   @media (max-width: 768px) {
     flex-direction: column;
-    width: 80%;
     gap: 15px;
-
-    & > button {
-      max-width: 60%;
-    }
   }
 
   @media (max-width: 425px) {
@@ -66,7 +67,7 @@ export const FormInput = styled.input`
   border-radius: 5px;
   margin-right: 10px;
   outline: none;
-  border: 1px solid #fff;
+  border: none;
   font-size: 16px;
 
   &::placeholder {
@@ -77,6 +78,18 @@ export const FormInput = styled.input`
     width: 100%;
     margin: 0;
   }
+`;
+
+export const FormTextArea = styled.textarea`
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+  height: 150px;
+  resize: none;
+  outline: none;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
 `;
 
 export const SocialMedia = styled.section`
@@ -112,6 +125,11 @@ export const Icon = styled(GiAbstract010)`
 
 export const WebsiteRights = styled.small`
   color: #fff;
+
+  @media (max-width: 768px) {
+    margin: 10px;
+
+  }
 `;
 
 export const SocialIcons = styled.div`
