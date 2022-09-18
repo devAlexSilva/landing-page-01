@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 export const FooterContainer = styled.div`
   background-color: #1e1e1e;
   padding: 4rem 0 .5rem;
+  min-height: calc(100vh - 80px);
   display: flex;
   flex-direction: column;
   justify-content: center;

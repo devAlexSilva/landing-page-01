@@ -2,7 +2,6 @@ import React from "react";
 import * as S from "./InfoSectionStyles";
 import { Container } from "../../GlobalStyles";
 import { Button } from "../button/Button";
-import { Link } from "react-router-dom";
 
 export const InfoSection = ({
   lightBg,
@@ -19,10 +18,12 @@ export const InfoSection = ({
   img,
   alt,
   showBtn,
+  btnUrl,
+  id
 }) => {
   return (
     <>
-      <S.InfoSec lightBg={lightBg}>
+      <S.InfoSec lightBg={lightBg} id={id}>
         <Container>
           <S.InfoRow about="row" imgStart={imgStart}>
             <S.InfoColumn about="c-l">
@@ -31,9 +32,9 @@ export const InfoSection = ({
                 <S.Heading lightText={lightText}>{headingLine}</S.Heading>
                 <S.Subtitle lightDesc={lightDesc}>{description}</S.Subtitle>
                 {showBtn ? (
-                  <Link to="#registre-se">
+                  <a href={btnUrl} target="_blank" rel="noreferrer">
                     <Button primary={primary} text={btnLabel} />
-                  </Link>
+                  </a>
                 ) : null}
               </S.TextWrapper>
             </S.InfoColumn>

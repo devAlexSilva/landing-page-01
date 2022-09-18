@@ -5,7 +5,7 @@ import { Button } from "../button/Button";
 export const Footer = () => {
   return (
     <>
-      <S.FooterContainer>
+      <S.FooterContainer id="contato">
         <S.FooterSubscription>
           <S.FooterSubHeading>
             Entre em contato para Tomarmos um café virtual

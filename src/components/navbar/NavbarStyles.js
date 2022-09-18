@@ -49,6 +49,10 @@ export const MobileIcon = styled.div`
     font-size: 1.8rem;
     cursor: pointer;
     transform: translate(-100%, 60%);
+  
+    &::-webkit-scrollbar {
+      display: none;
+    }
   }
 `;
 
@@ -88,7 +92,7 @@ export const NavItem = styled.li`
     }
 `;
 
-export const NavLink = styled(Link)`
+export const NavLink = styled.a`
     color: #fff;
     display: flex;
     align-items: center;
@@ -119,7 +123,7 @@ export const NavItemBtn = styled.li`
     }
 `
 
-export const NavBtnLink = styled(Link)`
+export const NavBtnLink = styled.a`
     display: flex;
     justify-content: center;
     align-items: center;

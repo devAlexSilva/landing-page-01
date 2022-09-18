@@ -13,7 +13,7 @@ export const Navbar = () => {
     window.innerWidth <= 768 ? setButtonMobile(true) : setButtonMobile(false);
   };
 
-  window.addEventListener("resize", isMobile);
+ // window.addEventListener("resize", isMobile);
 
   return (
     <S.Nav>
@@ -27,22 +27,19 @@ export const Navbar = () => {
         </S.MobileIcon>
         <S.NavMenu onClick={handleClick} click={isClick}>
           <S.NavItem>
-            <S.NavLink to="#">Home</S.NavLink>
+            <S.NavLink href="#react">React</S.NavLink>
           </S.NavItem>
           <S.NavItem>
-            <S.NavLink to="#">Sobre</S.NavLink>
-          </S.NavItem>
-          <S.NavItem>
-            <S.NavLink to="#">Contato</S.NavLink>
+            <S.NavLink href="#styled-components">styled-components</S.NavLink>
           </S.NavItem>
           <S.NavItemBtn>
             {buttonMobile ? (
-              <S.NavBtnLink to="#sky">
-                <Button onClick={handleClick} fontBig primary text="Login"/>
+              <S.NavBtnLink href="#contato">
+                <Button onClick={handleClick} fontBig primary text="contato"/>
               </S.NavBtnLink>
             ) : (
-              <S.NavBtnLink to="#Feng">
-                <Button primary text="Login" />
+              <S.NavBtnLink href="#contato">
+                <Button primary text="Entre em Contato" />
               </S.NavBtnLink>
             )}
           </S.NavItemBtn>
