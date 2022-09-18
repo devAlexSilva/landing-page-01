@@ -7,6 +7,7 @@ export const GlobalStyle = createGlobalStyle`
         padding: 0;
         font-family: 'Segoe UI', sans-serif;
     }
+
 `;
 
 export const Container = styled.div`
