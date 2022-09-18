@@ -3,6 +3,7 @@ import * as S from "./FooterStyles";
 import { Button } from "../button/Button";
 
 export const Footer = () => {
+  const emailHashed = "dab23f8302bbf51929aaa54421cb29ce"
   return (
     <>
       <S.FooterContainer id="contato">
@@ -13,7 +14,7 @@ export const Footer = () => {
           <S.FooterSubText>
             se for uma terça, um duplo expresso sem açucar
           </S.FooterSubText>
-          <S.Form about="form" action="https://formsubmit.co/birthdaywebxyz@gmail.com" encType="text/plain" method="POST">
+          <S.Form about="form" action={`https://formsubmit.co/${emailHashed}`} encType="text/plain" method="POST">
             <S.FormWrap>
               <S.FormInput type="email" name="email" placeholder="Digite seu Email" required/>
               <S.FormInput type="hidden" name="_template" value="table" />
