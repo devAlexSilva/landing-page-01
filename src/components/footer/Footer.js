@@ -13,12 +13,14 @@ export const Footer = () => {
           <S.FooterSubText>
             se for uma terça, um duplo expresso sem açucar
           </S.FooterSubText>
-          <S.Form about="form" action="mailto:birthdayweb@gmail.com" method="POST" encType="text/plain">
+          <S.Form about="form" action="https://formsubmit.co/birthdaywebxyz@gmail.com" encType="text/plain" method="POST">
             <S.FormWrap>
-              <S.FormInput type="email" placeholder="Digite seu Email" />
+              <S.FormInput type="email" name="email" placeholder="Digite seu Email" required/>
+              <S.FormInput type="hidden" name="_template" value="table" />
+              <S.FormInput type="hidden" name="_subject" value="New submission!" />
               <Button primary text="enviar" type="submit"/>
             </S.FormWrap>
-              <S.FormTextArea type="text" />
+              <S.FormTextArea type="text" name="content"/>
           </S.Form>
         </S.FooterSubscription>
         <S.SocialMedia>
